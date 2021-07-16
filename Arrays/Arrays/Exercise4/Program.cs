@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Exercise4
 {
@@ -18,13 +14,22 @@ namespace Exercise4
                 1456, 2265, 1457, 2456
             };
 
-            /*
-            fixme - check if contains number 1245 
-            for (?) {
-                ......
-                Console.WriteLine("Contains!");
+            Console.WriteLine("Enter the number to check availability: ");
+            int input = Convert.ToInt32(Console.ReadLine());
+
+            string availability = "Out of stock";
+
+            for (int i = 0; i < myArray.Length; i++)
+            {
+                {
+                    if (myArray[i] == input)
+                    {
+                        availability = "In stock";
+                    }
+                }
             }
-            */
+            Console.WriteLine(availability);
+            Console.ReadKey();
         }
     }
 }
