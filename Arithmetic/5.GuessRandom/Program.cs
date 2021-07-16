@@ -13,17 +13,11 @@ namespace _5.GuessRandom
             int randomNum = (rand.Next(100));
 
             if (userGuess == randomNum)
-            {
                 Console.WriteLine($"You guessed it!  What are the odds?!?");
-            } 
             else if (userGuess > randomNum)
-            {
                 Console.WriteLine($"Sorry, you are too high.  I was thinking of {randomNum}");
-            }
             else
-            {
                 Console.WriteLine($"Sorry, you are too low.  I was thinking of {randomNum}");
-            }
         }
     }
 }
