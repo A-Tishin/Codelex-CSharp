@@ -11,9 +11,7 @@ namespace Exercise2
             var sum = 0;
 
             foreach (var elem in myArray)
-            {
                 sum += elem;
-            }
 
             Console.WriteLine("The sum is " + sum);
             Console.ReadKey();

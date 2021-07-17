@@ -11,10 +11,8 @@ namespace Exercise3
             float sum = 0;
 
             foreach (var elem in numbers)
-            {
                 sum += elem;
-            }
-        
+
             Console.WriteLine($"Sum of the array is: {sum}");
             Console.WriteLine($"Average value of the array elements is: {(sum / numbers.Length)}");
             Console.ReadKey();

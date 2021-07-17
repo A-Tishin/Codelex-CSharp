@@ -20,14 +20,9 @@ namespace Exercise4
             string availability = "Out of stock";
 
             for (int i = 0; i < myArray.Length; i++)
-            {
-                {
-                    if (myArray[i] == input)
-                    {
-                        availability = "In stock";
-                    }
-                }
-            }
+                if (myArray[i] == input)
+                    availability = "In stock";
+
             Console.WriteLine(availability);
             Console.ReadKey();
         }

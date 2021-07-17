@@ -10,6 +10,8 @@ namespace TicTacToe
         {
             InitBoard();
             DisplayBoard();
+
+            Console.ReadKey();
         }
 
         private static void InitBoard()
@@ -20,7 +22,6 @@ namespace TicTacToe
                 for (var c = 0; c < 3; c++)
                     board[r, c] = ' ';
             }
-            
         }
 
         private static void DisplayBoard()
@@ -30,7 +31,6 @@ namespace TicTacToe
             Console.WriteLine("  1  " + board[1, 0] + "|" + board[1, 1] + "|" + board[1, 2]);
             Console.WriteLine("    --+-+--");
             Console.WriteLine("  2  " + board[2, 0] + "|" + board[2, 1] + "|" + board[2, 2]);
-            Console.WriteLine("    --+-+--");
         }
     }
 }
