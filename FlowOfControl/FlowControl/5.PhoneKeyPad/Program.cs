@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _5.PhoneKeyPad
+namespace PhoneKeyPad
 {
     class Program
     {
@@ -45,6 +45,7 @@ namespace _5.PhoneKeyPad
                         break;
                 }
             }
+
             Console.ReadKey();
         }
     }

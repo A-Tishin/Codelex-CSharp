@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _4.DaysOfWeek
+namespace DaysOfWeek
 {
     class Program
     {
@@ -34,6 +34,7 @@ namespace _4.DaysOfWeek
                     day = "Not a valid day";
                     break;
             }
+
             Console.WriteLine($"{day}");
         }
     }
