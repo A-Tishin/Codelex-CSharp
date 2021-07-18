@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _6.CozaLoza
+namespace CozaLoza
 {
     class Program
     {

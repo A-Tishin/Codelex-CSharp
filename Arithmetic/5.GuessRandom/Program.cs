@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _5.GuessRandom
+namespace GuessRandom
 {
     class Program
     {
@@ -8,7 +8,6 @@ namespace _5.GuessRandom
         {
             Console.Write("I'm thinking of a number between 1-100.  Try to guess it.");
             int userGuess = Convert.ToInt32(Console.ReadLine());
-
             var rand = new Random();
             int randomNum = (rand.Next(100));
 

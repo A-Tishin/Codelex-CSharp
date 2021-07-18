@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _1.isFifteen
+namespace IsFifteen
 {
     class Program
     {

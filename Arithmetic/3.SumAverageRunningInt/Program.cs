@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _3.SumAverageRunningInt
+namespace SumAverageRunningInt
 {
     class Program
     {

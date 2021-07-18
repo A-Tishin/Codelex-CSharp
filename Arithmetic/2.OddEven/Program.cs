@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _2.OddEven
+namespace OddEven
 {
     class Program
     {

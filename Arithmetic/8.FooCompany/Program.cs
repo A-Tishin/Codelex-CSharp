@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _8.FooCompany
+namespace FooCompany
 {
     class Program
     {
@@ -12,20 +12,12 @@ namespace _8.FooCompany
             for (var i = 0; i < employees.Length; i++)
             {
                 if (hours[i] > 40 && hours[i] < 61 && employees[i] > 8)
-                {
                     Console.WriteLine($"{40 * employees[i] + ((hours[i] - 40) * employees[i] * 1.5)}");
-                }
                 else if (hours[i] < 40 && employees[i] > 8)
-                {
                     Console.WriteLine($"{employees[i] * hours[i]}");
-                }
                 else
-                {
                     Console.WriteLine("Error! Too many hours or too small salary per hour.");
-                }
             }
-
-
         }
     }
 }
