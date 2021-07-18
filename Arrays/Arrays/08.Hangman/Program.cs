@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.Contracts;
 
 namespace _08.Hangman
 {
@@ -7,7 +8,6 @@ namespace _08.Hangman
         static void Main(string[] args)
         {
             string[] beastArray = { "leviathan", "kraken", "bahamut", "ouroboros", "jormungandr" };
-            
             Random rand = new Random();
             int randomIndex = rand.Next(0, 5);
             string[] hiddenChars = new string[beastArray[randomIndex].Length];
@@ -17,27 +17,33 @@ namespace _08.Hangman
             for (var i = 0; i < beastArray[randomIndex].Length; i++)
                 hiddenChars[i] = " _";
 
-            for (var k = 0; k < 15; k++)
+            for (var k = 0; k < 16; k++)
             {
                 Console.Clear();
-
-                Console.WriteLine($"You have {15 - k} shots before reset.");
+                Console.WriteLine($"You have {15 - k} shots before fail.");
                 Console.Write("Word: ");
+
                 for (var o = 0; o < hiddenChars.Length; o++)
                     Console.Write(hiddenChars[o]);
-                Console.WriteLine();
 
+                Console.WriteLine();
                 Console.Write("Misses: " + misses);
                 Console.WriteLine();
-
                 Console.Write("Guess: ");
+
                 if (counter == beastArray[randomIndex].Length)
                 {
                     Console.WriteLine("You won!");
                     return;
                 }
-                char guess = Convert.ToChar(Console.ReadLine());
 
+                if (15 - k == 0)
+                {
+                    Console.WriteLine("You failed");
+                    return;
+                }
+
+                char guess = Convert.ToChar(Console.ReadLine());
                 bool missed = true;
 
                 for (var j = 0; j < beastArray[randomIndex].Length; j++)
@@ -49,6 +55,7 @@ namespace _08.Hangman
                         missed = false;
                     }
                 }
+
                 if (missed)
                     misses += guess;
             }

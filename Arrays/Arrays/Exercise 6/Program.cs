@@ -17,14 +17,14 @@ namespace Exercise_6
                 newArray[k] = array[k];
 
             array[9] = -7;
-
             Console.Write("Array 1:");
+
             for (var i = 0; i < array.Length; i++)
                 Console.Write(" " + array[i]);
 
             Console.WriteLine();
-
             Console.Write("Array 2:");
+
             for (var j = 0; j < newArray.Length; j++)
                 Console.Write(" " + newArray[j]);
 
