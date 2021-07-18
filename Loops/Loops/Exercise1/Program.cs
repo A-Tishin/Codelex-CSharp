@@ -8,10 +8,8 @@ namespace Exercise1
         {
             Console.WriteLine("The first 10 natural numbers are: ");
 
-            for (var i = 0; i < 10; i++) 
-            {
-              Console.WriteLine(i);
-            }
+            for (var i = 0; i < 10; i++)
+                Console.WriteLine(i);
 
             Console.ReadKey();
         }
