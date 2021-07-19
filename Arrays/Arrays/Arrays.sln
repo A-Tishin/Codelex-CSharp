@@ -3,21 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.Arrays", "Exercise1\01.Arrays.csproj", "{1C71F394-96C0-4D45-BE60-7E1CF260D4B0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays1", "Exercise1\Arrays1.csproj", "{1C71F394-96C0-4D45-BE60-7E1CF260D4B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.Arrays", "Exercise2\02.Arrays.csproj", "{7FF6B203-63F0-4836-8291-973BBE89D0BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays2", "Exercise2\Arrays2.csproj", "{7FF6B203-63F0-4836-8291-973BBE89D0BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.Arrays", "Exercise3\03.Arrays.csproj", "{16DACC2A-A38E-4B48-AC4D-30BFAA802973}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays3", "Exercise3\Arrays3.csproj", "{16DACC2A-A38E-4B48-AC4D-30BFAA802973}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.Arrays", "Exercise4\04.Arrays.csproj", "{B34A17CA-F336-479E-A4BA-5ED8634DD50F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays4", "Exercise4\Arrays4.csproj", "{B34A17CA-F336-479E-A4BA-5ED8634DD50F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "05.Arrays", "Exercise5\05.Arrays.csproj", "{3F34EE8C-3F36-4F2F-A40D-64378AE1DE38}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arrays5", "Exercise5\Arrays5.csproj", "{3F34EE8C-3F36-4F2F-A40D-64378AE1DE38}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TicTacToe", "TicTacToe\TicTacToe.csproj", "{F0A071BC-6F7E-4D2A-B972-0B430ACD6181}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "06.Arrays", "Exercise 6\06.Arrays.csproj", "{585534AA-0C6C-48F3-AF4C-D0FC76A76C2E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arrays6", "Exercise 6\Arrays6.csproj", "{585534AA-0C6C-48F3-AF4C-D0FC76A76C2E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.Hangman", "08.Hangman\08.Hangman.csproj", "{75F09DCC-0CCB-471C-9E38-5A5B17D02207}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hangman", "08.Hangman\Hangman.csproj", "{75F09DCC-0CCB-471C-9E38-5A5B17D02207}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

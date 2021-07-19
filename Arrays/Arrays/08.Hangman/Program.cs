@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Diagnostics.Contracts;
 
-namespace _08.Hangman
+namespace Hangman
 {
     class Program
     {
