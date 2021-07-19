@@ -16,7 +16,11 @@ namespace Exercise3
             }
             Console.WriteLine();
             int choice = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($"It's {Array.IndexOf(numArray, choice)}.");
+
+            if (Array.IndexOf(numArray, choice) == -1)
+                Console.WriteLine($"{choice} doesn't exists in this array.");
+            else
+                Console.WriteLine($"It's {Array.IndexOf(numArray, choice)}.");
             Console.ReadKey();
         }
 
