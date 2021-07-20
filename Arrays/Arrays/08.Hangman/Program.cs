@@ -14,7 +14,9 @@ namespace Hangman
             var counter = 0;
 
             for (var i = 0; i < beastArray[randomIndex].Length; i++)
+            {
                 hiddenChars[i] = " _";
+            }
 
             for (var k = 0; k < 16; k++)
             {
@@ -23,7 +25,9 @@ namespace Hangman
                 Console.Write("Word: ");
 
                 for (var o = 0; o < hiddenChars.Length; o++)
+                {
                     Console.Write(hiddenChars[o]);
+                }
 
                 Console.WriteLine();
                 Console.Write("Misses: " + misses);
