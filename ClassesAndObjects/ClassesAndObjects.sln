@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FuelConsumptionCalculator",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoStore", "VideoStore\VideoStore.csproj", "{40352489-4287-4C39-879A-55BB1A9ED983}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassProduct1", "ClassProduct\ClassProduct1.csproj", "{D8F0FF9C-DA49-4B19-9284-3EDD8091BEFA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{40352489-4287-4C39-879A-55BB1A9ED983}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40352489-4287-4C39-879A-55BB1A9ED983}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40352489-4287-4C39-879A-55BB1A9ED983}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8F0FF9C-DA49-4B19-9284-3EDD8091BEFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8F0FF9C-DA49-4B19-9284-3EDD8091BEFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8F0FF9C-DA49-4B19-9284-3EDD8091BEFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8F0FF9C-DA49-4B19-9284-3EDD8091BEFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
