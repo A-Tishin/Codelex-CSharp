@@ -18,12 +18,12 @@
 
         public bool GasHog()
         {
-           return ConsumptionPer100Km() > 15
+            return ConsumptionPer100Km() > 15;
         }
 
         public bool EconomyCar()
         {
-            return ConsumptionPer100Km() < 5
+            return ConsumptionPer100Km() < 5;
         }
 
         public void FillUp(int mileage, double liters)
