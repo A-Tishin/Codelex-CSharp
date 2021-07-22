@@ -11,25 +11,20 @@ namespace EnergyDrinks
         private static void Main(string[] args)
         {
             Console.WriteLine("Total number of people surveyed " + NumberedSurveyed);
-            Console.WriteLine($"Approximately {} bought at least one energy drink");
-            Console.WriteLine($"{} of those prefer citrus flavored energy drinks.");
+            Console.WriteLine($"Approximately {CalculateEnergyDrinkers()} bought at least one energy drink");
+            Console.WriteLine($"{CalculatePreferCitrus()} of those prefer citrus flavored energy drinks.");
+
+            Console.ReadKey();
         }
 
-        double CalculateEnergyDrinkers(int a, double b)
+        static double CalculateEnergyDrinkers()
         {
-            private int myVar;
-
-        public int MyProperty
-        {
-            get { return myVar; }
-            set { myVar = value; }
+            return Math.Round(NumberedSurveyed * PurchasedEnergyDrinks);
         }
 
-    }
-
-        double CalculatePreferCitrus(int a, double b, double c)
+        static double CalculatePreferCitrus()
         {
-            return a * b * c;
+            return Math.Round(NumberedSurveyed * PurchasedEnergyDrinks * PreferCitrusDrinks);
         }
     }
 }
