@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EnergyDrinks
 {
@@ -14,22 +10,26 @@ namespace EnergyDrinks
 
         private static void Main(string[] args)
         {
-            //fixme
-            /*
-             Console.WriteLine("Total number of people surveyed " + NumberedSurveyed);
-             Console.WriteLine("Approximately " + energyDrinkers + " bought at least one energy drink");
-             Console.WriteLine(preferCitrus + " of those " + "prefer citrus flavored energy drinks.");
-             */
+            Console.WriteLine("Total number of people surveyed " + NumberedSurveyed);
+            Console.WriteLine($"Approximately {} bought at least one energy drink");
+            Console.WriteLine($"{} of those prefer citrus flavored energy drinks.");
         }
 
-        double CalculateEnergyDrinkers(int numberSurveyed)
+        double CalculateEnergyDrinkers(int a, double b)
         {
-            throw new Exception("Sorry, no code written :(");
+            private int myVar;
+
+        public int MyProperty
+        {
+            get { return myVar; }
+            set { myVar = value; }
         }
 
-        double CalculatePreferCitrus(int numberSurveyed)
+    }
+
+        double CalculatePreferCitrus(int a, double b, double c)
         {
-            throw new Exception("Sorry, no code written :(");
+            return a * b * c;
         }
     }
 }

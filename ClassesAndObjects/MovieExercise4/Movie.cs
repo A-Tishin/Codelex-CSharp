@@ -4,9 +4,9 @@ namespace MovieExercise4
 {
     class Movie
     {
-        private string title;
-        private string studio;
-        private string rating;
+        public string title;
+        public string studio;
+        public string rating;
 
         public Movie(string title, string studio, string rating)
         {
@@ -22,13 +22,18 @@ namespace MovieExercise4
             rating = "PG";
         }
 
-        public string[] GetPG(string[] arr)
+        public static List<Movie> GetPG(Movie[] arr)
         {
-            List<string> pgArray = new List<string>();
+            List<Movie> pgArray = new List<Movie>();
             foreach (var i in arr)
             {
-                
+                if (i.rating == "PG")
+                {
+                    pgArray.Add(i);
+                }
             }
+
+            return pgArray;
         }
     }
 }
