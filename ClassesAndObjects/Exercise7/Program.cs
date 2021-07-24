@@ -15,7 +15,21 @@ namespace Exercise7
             Dog molly = new Dog("Molly", "Female");
             Dog coco = new Dog("Coco", "Female");
 
-            max.
+            max.mom = lady;
+            max.dad = rocky;
+            coco.mom = molly;
+            coco.dad = buster;
+            rocky.mom = molly;
+            rocky.dad = sam;
+            buster.mom = lady;
+            buster.dad = sparky;
+
+            Console.WriteLine(coco.DadName());
+            Console.WriteLine(sparky.DadName());
+            Console.WriteLine(coco.HasSameMotherAs(rocky));
+            Console.WriteLine(buster.HasSameMotherAs(coco));
+
+            Console.ReadKey();
         }
     }
 }

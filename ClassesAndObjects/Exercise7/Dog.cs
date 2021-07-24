@@ -10,8 +10,8 @@ namespace Exercise7
     {
         private string _name;
         private string _sex;
-        private string _mom;
-        private string _dad;
+        public Dog mom;
+        public Dog dad;
 
         public Dog(string name, string sex) 
         {
@@ -21,12 +21,22 @@ namespace Exercise7
 
         public string DadName()
         {
-            if (_dad == null)
+            if (dad == null)
             {
                 return "Unknown";
             }
 
-            return _dad;
+            return dad._name;
+        }
+
+        public bool HasSameMotherAs(Dog cousin)
+        {
+            if (mom._name == cousin.mom._name)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }
