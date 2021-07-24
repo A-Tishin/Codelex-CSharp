@@ -22,11 +22,6 @@
             _money += i;
         }
 
-        public double balance()
-        {
-            return _money;
-        }
-
         public override string ToString()
         {
             return $"{_name}: {_money}";

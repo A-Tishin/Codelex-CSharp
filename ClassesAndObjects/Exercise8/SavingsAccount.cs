@@ -27,7 +27,7 @@ namespace Exercise8
         public void WithdrawBalance(decimal withdraw)
         {
             _currentBalance -= withdraw;
-            _totalWithdrawn -= withdraw;
+            _totalWithdrawn += withdraw;
         }
 
         public void MonthlyInterest(decimal rate)

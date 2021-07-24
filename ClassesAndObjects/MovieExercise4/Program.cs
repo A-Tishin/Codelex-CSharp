@@ -13,12 +13,11 @@ namespace MovieExercise4
                 new("Glass", "Buena Vista International", "PG13"),
                 new("Spider-Man: Into the Spider-Verse", "Columbia Pictures")
             };
-
             List<Movie> pgArray = Movie.GetPG(array);
 
             foreach (var movie in pgArray)
             {
-                Console.WriteLine($"{movie.title} is {movie.rating} rated." );
+                movie.PrintMovie();
             }
 
             Console.ReadKey();

@@ -22,7 +22,9 @@
         public void Burn()
         {
             if (Liters > MinLevel)
+            {
                 Liters--;
+            }
         }
     }
 }

@@ -10,7 +10,7 @@ namespace FuelConsumptionCalculator
 
             for (var i = 0; i < 3; i++)
             {
-                Console.WriteLine($"You are at the gas station. Enter your mileage: ");
+                Console.WriteLine($"You are at the gas station. Enter your mileage from last gas station: ");
                 int mileage = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine($"And how much liters to fill: ");
                 int liters = Convert.ToInt32(Console.ReadLine());

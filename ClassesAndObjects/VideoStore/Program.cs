@@ -55,7 +55,6 @@ namespace VideoStore
             string movieName = Console.ReadLine();
             Console.WriteLine("Enter rating");
             double rating = Convert.ToDouble(Console.ReadLine());
-
             _videoStore.TakeUsersRating(rating, movieName);
         }
 

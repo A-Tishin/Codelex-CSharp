@@ -8,17 +8,23 @@ namespace ClassProduct1
         private decimal _price;
         private int _amount;
 
-        public Product(string name, decimal priceAtStart, int amountAtStart)
+        public Product(string name, decimal price, int amount)
         {
             _name = name;
-            _amount = amountAtStart;
-            _price = priceAtStart;
+            _amount = amount;
+            _price = price;
         }
 
         public void PrintProduct()
         {
-            Console.WriteLine($"{_name} | price: {_price} | quantity: {_amount}");
-            Console.WriteLine();
+            if (_amount > 0)
+            {
+                Console.WriteLine($"{_name} | price: {_price} | quantity: {_amount}");
+            }
+            else
+            {
+                Console.WriteLine($"{_name} | price: {_price} | Out of stock.");
+            }
         }
 
         public void NewPrice(decimal price)
@@ -26,9 +32,19 @@ namespace ClassProduct1
             _price = price;
         }
 
-        public void NewQuantity()
+        public void Sold()
         {
+            if (_amount == 0)
+            {
+                return;
+            }
             _amount--;
+        }
+
+        public void Supply(int quantity)
+        {
+            _amount += quantity;
+            Console.WriteLine($"X{quantity} {_name} has arrived to store.");
         }
     }
 }
