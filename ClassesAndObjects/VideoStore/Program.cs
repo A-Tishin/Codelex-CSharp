@@ -13,13 +13,14 @@ namespace VideoStore
         private static void Main(string[] args)
         {
             while (true)
-            {
+            {   
                 Console.WriteLine("Choose the operation you want to perform ");
                 Console.WriteLine("Choose 0 for EXIT");
                 Console.WriteLine("Choose 1 to fill video store");
                 Console.WriteLine("Choose 2 to rent video (as user)");
                 Console.WriteLine("Choose 3 to return video (as user)");
                 Console.WriteLine("Choose 4 to list inventory");
+                Console.WriteLine("Choose 5 to rate video in inventory");
 
                 int n = Convert.ToByte(Console.ReadLine());
 
@@ -39,10 +40,23 @@ namespace VideoStore
                     case 4:
                         ListInventory();
                         break;
+                    case 5:
+                        AddRating();
+                        break;
                     default:
                         return;
                 }
             }
+        }
+
+        private static void AddRating()
+        {
+            Console.WriteLine("Enter movie name");
+            string movieName = Console.ReadLine();
+            Console.WriteLine("Enter rating");
+            double rating = Convert.ToDouble(Console.ReadLine());
+
+            _videoStore.TakeUsersRating(rating, movieName);
         }
 
         private static void ListInventory()
@@ -58,7 +72,7 @@ namespace VideoStore
                 string movieName = Console.ReadLine();
 
                 Console.WriteLine("Enter rating");
-                int rating = Convert.ToInt16(Console.ReadLine());
+                double rating = Convert.ToDouble(Console.ReadLine());
 
                 _videoStore.AddVideo(movieName);
                 _videoStore.TakeUsersRating(rating, movieName);
