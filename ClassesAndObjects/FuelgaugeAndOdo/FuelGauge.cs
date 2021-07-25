@@ -3,8 +3,8 @@
     class FuelGauge
     {
         public int Liters;
-        private const int MinLevel = 0;
-        private const int MaxLevel = 70;
+        private const int _minLevel = 0;
+        private const int _maxLevel = 70;
 
         public int GetLiters()
         {
@@ -16,12 +16,12 @@
             do
             {
                 Liters++;
-            } while (Liters < MaxLevel);
+            } while (Liters < _maxLevel);
         }
 
         public void Burn()
         {
-            if (Liters > MinLevel)
+            if (Liters > _minLevel)
             {
                 Liters--;
             }
