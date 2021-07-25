@@ -5,35 +5,26 @@
         private string _name;
         private double _money;
 
-        public Account(string v1, double v2)
+        public Account(string name, double money)
         {
-            
+            _name = name;
+            _money = money;
         }
 
         public double withdrawal(double i)
         {
+            _money -= i;
             return i;
         }
 
         public void deposit(double i)
         {
-            
-        }
-
-        public double balance()
-        {
-            return _money;
+            _money += i;
         }
 
         public override string ToString()
         {
             return $"{_name}: {_money}";
-        }
-
-        public string Name
-        {
-            get => _name;
-            set => _name = value;
         }
     }
 }

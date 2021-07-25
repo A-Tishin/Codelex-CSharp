@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Account
 {
@@ -10,21 +6,20 @@ namespace Account
     {
         private static void Main(string[] args)
         {
-            var aAccount = new Account("A account", 100.00);
-            var bAccount = new Account("B account",0);
-            var cAccount = new Account("C Account", 0);
+            Account A = new Account("A", 100.00);
+            Account B = new Account("B", 0);
+            Account C = new Account("C", 0);
             Console.WriteLine("Initial state");
-            Console.WriteLine(aAccount);
-            Console.WriteLine(bAccount);
-            Console.WriteLine(cAccount);
-            aAccount.Name = "GGGG";
-            Transfer(aAccount,bAccount, 50.0);
-            Transfer(bAccount,cAccount, 25.0);
+            Console.WriteLine(A);
+            Console.WriteLine(B);
+            Console.WriteLine(C);
+            Transfer(A, B, 50.0);
+            Transfer(B, C, 25.0);
             
             Console.WriteLine("Final state");
-            Console.WriteLine(aAccount);
-            Console.WriteLine(bAccount);
-            Console.WriteLine(cAccount);
+            Console.WriteLine(A);
+            Console.WriteLine(B);
+            Console.WriteLine(C);
 
             Console.ReadKey();
         }
