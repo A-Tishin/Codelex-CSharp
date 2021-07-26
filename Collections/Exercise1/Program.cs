@@ -8,25 +8,41 @@ namespace Exercise1
 {
     class Program
     {
-        /**
-           * Origination:
-           * Audi -> Germany
-           * BMW -> Germany
-           * Honda -> Japan
-           * Mercedes -> Germany
-           * VolksWagen -> Germany
-           * Tesla -> USA
-           */
-
         private static void Main(string[] args)
         {
-            string[] array = { "Audi", "BMW", "Honda", "Mercedes", "VolksWagen", "Mercedes", "Tesla" };
+            string[] array = { "Audi", "BMW", "Honda", "Mercedes", "Volkswagen", "Mercedes", "Tesla" };
+            var list = new List<string>() {"Audi", "BMW", "Honda", "Mercedes", "Volkswagen", "Mercedes", "Tesla"};
+            var hashSet = new HashSet<string>() {"Audi", "BMW", "Honda", "Mercedes", "Volkswagen", "Mercedes", "Tesla"};
+            var dictionary = new Dictionary<string, string>
+            {
+                {"Audi", "Germany"},
+                {"BMW", "Germany"},
+                {"Honda", "Japan"},
+                {"Mercedes", "Germany"},
+                {"Volkswagen", "Germany"},
+                {"Tesla", "USA"}
+            };
 
-            //todo - replace array with an List and print out the results
+            foreach (var car in list)
+            {
+                Console.Write($"{car}, ");
+            }
 
-            //todo - replace array with a HashSet and print out the results
+            Console.WriteLine();
 
-            //todo - replace array with a Dictionary (use brand as key and origination as value) and print out the results
+            foreach (var car in hashSet)
+            {
+                Console.Write($"{car}, ");
+            }
+
+            Console.WriteLine();
+
+            foreach (var car in dictionary)
+            {
+                Console.WriteLine($"{car.Key} from {car.Value}");
+            }
+
+            Console.ReadKey();
         }
     }
 }
