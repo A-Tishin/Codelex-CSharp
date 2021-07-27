@@ -20,7 +20,6 @@ namespace ListExercise9
             };
 
             Console.WriteLine(string.Join(",", firstList));
-
             var secondList = new List<string>
             {
                 "Red",
@@ -31,7 +30,6 @@ namespace ListExercise9
             };
 
             Console.WriteLine(string.Join(",", secondList));
-
             var thirdList = firstList;
             thirdList.AddRange(secondList);
             Console.WriteLine(string.Join(",", thirdList));

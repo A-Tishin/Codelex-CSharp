@@ -17,7 +17,6 @@ namespace ListExercise3
             colors.Add("White");
             colors.Add("Black");
             Console.WriteLine(string.Join(",", colors));
-
             colors.Insert(0, "Purple");
             colors.Insert(2, "Blue");
             Console.WriteLine(string.Join(",", colors));

@@ -21,7 +21,6 @@ namespace ListExercise4
 
             string element = colors[0];
             Console.WriteLine("First element: " + element);
-
             element = colors[2];
             Console.WriteLine("Third element: " + element);
             Console.ReadKey();

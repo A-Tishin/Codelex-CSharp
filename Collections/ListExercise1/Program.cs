@@ -16,6 +16,7 @@ namespace ListExercise1
             colors.Add("Blue");
             colors.Add("Black");
             colors.Add("White");
+
             foreach (var color in colors)
             {
                 Console.WriteLine(color);

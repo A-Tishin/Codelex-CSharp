@@ -15,6 +15,12 @@ namespace Histogram
         private static void Main(string[] args)
         {
             var readText = File.ReadAllText(Path).Split(' ');
+            PrintHistogram(readText);
+            Console.ReadKey();
+        }
+
+        static void PrintHistogram(string[] scores)
+        {
             string alone = "  100: ";
 
             for (var i = 0; i < 10; i++)
@@ -25,22 +31,21 @@ namespace Histogram
                 {
                     output = "00-09: ";
                 }
-                
-                for (var j = 0; j < readText.Length; j++)
+
+                for (var j = 0; j < scores.Length; j++)
                 {
-                    if (Convert.ToInt32(readText[j]) > i * 10 && Convert.ToInt32(readText[j]) < i * 10 + 9)
+                    if (Convert.ToInt32(scores[j]) > i * 10 && Convert.ToInt32(scores[j]) < i * 10 + 9)
                     {
                         output += "*";
-                    } else if (Convert.ToInt32(readText[j]) == 100 && i == 9)
+                    }
+                    else if (Convert.ToInt32(scores[j]) == 100 && i == 9)
                     {
                         alone += '*';
                     }
                 }
                 Console.WriteLine(output);
             }
-
             Console.WriteLine(alone);
-            Console.ReadKey();
         }
     }
 }
