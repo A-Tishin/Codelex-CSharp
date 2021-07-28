@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,19 +11,24 @@ namespace ListExercise11
     {
         static void Main(string[] args)
         {
-            //TODO: Create an List with string elements
+            List<string> valueList = new List<string>();
 
-            //TODO: Add 10 values to list
+            for (var i = 1; i <= 10; i++)
+            {
+                valueList.Add("A" + i);
+            }
 
-            //TODO: Add new value at 5th position
+            valueList.Insert(4, "B");
+            valueList[valueList.Count - 1] = "C";
+            valueList.Sort();
+            Console.WriteLine("Foobar? " + valueList.Contains("Foobar"));
 
-            //TODO: Change value at last position (Calculate last position programmatically)
+            foreach (var value in valueList)
+            {
+                Console.WriteLine(value);
+            }
 
-            //TODO: Sort your list in alphabetical order
-
-            //TODO: Check if your list contains "Foobar" element
-
-            //TODO: Print each element of list using loop
+            Console.ReadKey();
         }
     }
 }
