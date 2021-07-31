@@ -10,7 +10,7 @@ namespace Hierarchy
     {
         public string livingRegion;
 
-        protected Mammal(string animalName, string animalType, double animalWeight, string livingRegion)
+        protected Mammal(string animalType, string animalName, double animalWeight, string livingRegion)
             : base(animalType, animalName, animalWeight)
         {
             this.livingRegion = livingRegion;

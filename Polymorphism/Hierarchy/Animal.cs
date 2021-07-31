@@ -11,7 +11,7 @@ namespace Hierarchy
          public string animalName;
          public string animalType;
          public double animalWeight;
-         public int foodEaten;
+         public int foodEaten = 0;
 
          protected Animal(string animalType, string animalName, double animalWeight)
          {
@@ -19,8 +19,11 @@ namespace Hierarchy
              this.animalName = animalName;
              this.animalWeight = animalWeight;
          }
-         public void MakeSound() {}
 
-         public void eat(Food foodType, int foodEaten) { }
+         public abstract void MakeSound();
+
+         public abstract string ToString();
+
+         public abstract void Eat(Food food);
      }
 }

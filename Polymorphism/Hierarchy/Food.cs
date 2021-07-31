@@ -8,6 +8,13 @@ namespace Hierarchy
 {
     abstract class Food
     {
-        public int quantity;
+        public int quantity = 0;
+
+        protected Food(int quantity)
+        {
+            this.quantity = quantity;
+        }
+
+        public abstract string GetFoodType();
     }
 }

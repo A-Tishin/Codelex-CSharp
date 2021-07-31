@@ -15,5 +15,21 @@ namespace Hierarchy
         {
             _breed = breed;
         }
+
+        public override void MakeSound()
+        {
+            Console.WriteLine("Meowwww");
+        }
+
+        public override void Eat(Food food)
+        {
+            foodEaten = food.quantity;
+            Console.WriteLine($"{animalType}, [{animalName}, {_breed}, {animalWeight}, {livingRegion}, {foodEaten}]");
+        }
+
+        public override string ToString()
+        {
+            return $"{animalType}, [{animalName}, {_breed}, {animalWeight}, {livingRegion}, {foodEaten}] ";
+        }
     }
 }
