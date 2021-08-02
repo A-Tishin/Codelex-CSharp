@@ -2,18 +2,29 @@ namespace AdApp
 {
     public class TVAd: Advert
     {
-        public TVAd(int fee) : base(fee)
+        private int _pricePerSecond;
+        private int _showTime;
+        private bool _isPeakTime;
+        private double _peakTimeRate = 2;
+        public TVAd(int fee, int pricePerSecond, int showTime, bool isPeakTime) : base(fee)
         {
+            _pricePerSecond = pricePerSecond;
+            _showTime = showTime;
+            _isPeakTime = isPeakTime;
         }
         
-        public new int Cost() 
+        public override double Cost() 
         {
-            return base.Cost();
+            if (_isPeakTime)
+            {
+                return base.Cost() + _pricePerSecond * _showTime * _peakTimeRate;
+            }
+            return base.Cost() + _pricePerSecond * _showTime;
         }
 
-        public override string ToString() 
+        public override string ToString()
         {
-            return base.ToString();
+            return "TV commercial price: " + Cost();
         }
     }
 }
