@@ -25,7 +25,6 @@ namespace Firm
         public override double Pay()
         {
             return base.Pay() + _commissionRate * _totalSales;
-
         }
 
         public override string ToString()
