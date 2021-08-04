@@ -12,7 +12,7 @@ namespace Exercise_6.Tests
     public class ProgramTests
     {
         [TestMethod()]
-        public void GetChangedArrayTest()
+        public void GetChangedArrayTest_inputArray_returnModArray()
         {
             int num = -7;
             int[] testArr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
