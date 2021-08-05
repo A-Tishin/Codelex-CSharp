@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace WordCount
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            string[] lines =
+            var lines =
                 File.ReadAllLines(@"C:\Users\deadr\Desktop\CodelexC#Git\Collections\WordCount\lear.txt");
 
             Console.WriteLine("Lines = " + lines.Length);
@@ -20,7 +20,7 @@ namespace WordCount
             Console.ReadKey();
         }
 
-        static int CalcWords(string[] wordArr)
+        public static int CalcWords(string[] wordArr)
         {
             var wordList = new List<string>();
             foreach (var line in wordArr)
@@ -40,7 +40,7 @@ namespace WordCount
             return wordList.Count;
         }
 
-        static int CalcChars(string[] stringArr)
+        public static int CalcChars(string[] stringArr)
         {
             int charCount = 0;
 
