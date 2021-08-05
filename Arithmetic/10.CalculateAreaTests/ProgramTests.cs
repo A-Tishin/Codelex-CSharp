@@ -12,38 +12,36 @@ namespace CalculateArea.Tests
     public class ProgramTests
     {
         [TestMethod()]
-        public void calculateCircleAreaTest_input7_output4398()
+        [DataRow(10, "62,83")]
+        [DataRow(7, "43,98")]
+        [DataRow(-5, "Radius must be positive.")]
+        public void calculateCircleAreaTest_input7_output4398(double rad, string area)
         {
-            double rad = 7;
-            double op = 43.98;
-
             var result = Program.calculateCircleArea(rad);
 
-            Assert.AreEqual(op, result);
+            Assert.AreEqual(area, result);
         }
 
         [TestMethod()]
-        public void calculateRectangleAreaTest_inputTwoNums_returnProd()
+        [DataRow(5, 10, "50")]
+        [DataRow(5, -10, "Values must be positive")]
+        [DataRow(10, 0, "0")]
+        public void calculateRectangleAreaTest_inputTwoNums_returnProd(double width, double height, string area)
         {
-            double length = 10;
-            double width = 5.5;
-            double output = 55;
+            var result = Program.calculateRectangleArea(width, height);
 
-            var result = Program.calculateRectangleArea(length, width);
-
-            Assert.AreEqual(output, result);
+            Assert.AreEqual(area, result);
         }
 
         [TestMethod()]
-        public void calculateTriangleAreaTest_inputTwoNums_returnProdDividedBy2()
+        [DataRow(5, 2, "5")]
+        [DataRow(10, 50, "250")]
+        [DataRow(-5, 10, "Values must be positive")]
+        public void calculateTriangleAreaTest_inputTwoNums_returnProdDividedBy2(double ground, double height, string area)
         {
-            double floor = 10;
-            double height = 5;
-            double output = 25;
+            var result = Program.calculateTriangleArea(ground, height);
 
-            var result = Program.calculateTriangleArea(floor, height);
-
-            Assert.AreEqual(output, result);
+            Assert.AreEqual(area, result);
         }
     }
 }

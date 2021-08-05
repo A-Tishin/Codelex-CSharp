@@ -17,7 +17,7 @@ namespace GravityCalculator
 
         public static double CalcFinalPosition(double gravity, double initVelocity, double initPosition, double fallingTime)
         {
-            double finalPosition = 0.5 * gravity * Math.Pow(fallingTime, 2) + initPosition + initVelocity;
+            double finalPosition = 0.5 * gravity * Math.Pow(fallingTime, 2) + initPosition + initVelocity * fallingTime;
             return finalPosition;
         }
     }

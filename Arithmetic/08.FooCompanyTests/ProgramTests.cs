@@ -21,5 +21,25 @@ namespace FooCompany.Tests
 
             Assert.AreEqual(output, result);
         }
+
+        public void CheckLegalityAndSalaryTest_inputTestEmployee_returnErr1()
+        {
+            var mario = new Employee(7, 45);
+            string output = "Error!";
+
+            var result = Program.CheckLegalityAndSalary(mario);
+
+            Assert.AreEqual(output, result);
+        }
+
+        public void CheckLegalityAndSalaryTest_inputTestEmployee_returnErr2()
+        {
+            var mario = new Employee(10, 75);
+            string output = "Error!";
+
+            var result = Program.CheckLegalityAndSalary(mario);
+
+            Assert.AreEqual(output, result);
+        }
     }
 }

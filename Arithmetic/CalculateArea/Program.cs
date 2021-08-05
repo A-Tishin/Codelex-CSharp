@@ -71,20 +71,34 @@ namespace CalculateArea
             return userChoice;
         }
 
-        public static double calculateCircleArea(double radius)
+        public static string calculateCircleArea(double radius)
         {
-            double rad = Math.Round((Math.PI * radius * 2), 2);
-            return rad;
+            if (radius < 0)
+            {
+                return "Radius must be positive.";
+            }
+
+            return Math.Round((Math.PI * radius * 2), 2).ToString();
         }
 
-        public static double calculateRectangleArea(double length, double width)
+        public static string calculateRectangleArea(double length, double width)
         {
-            return Math.Round((length * width), 2);
+            if (length < 0 || width < 0)
+            {
+                return "Values must be positive";
+            }
+
+            return Math.Round((length * width), 2).ToString();
         }
 
-        public static double calculateTriangleArea(double ground, double height)
+        public static string calculateTriangleArea(double ground, double height)
         {
-            return Math.Round(((ground * height) / 2), 2);
+            if (ground < 0 || height < 0)
+            {
+                return "Values must be positive";
+            }
+
+            return Math.Round(((ground * height) / 2), 2).ToString();
         }
     }
 }

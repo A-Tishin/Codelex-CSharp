@@ -12,14 +12,14 @@ namespace IsFifteen.Tests
     public class ProgramTests
     {
         [TestMethod()]
-        public void IsFifteenTest_input15and20_returnTrue()
+        [DataRow(1, 2, false)]
+        [DataRow(0, 15, true)]
+        [DataRow(15, 15, true)]
+        public void IsFifteenTest_inputNums_returnBool(int a, int b, bool c)
         {
-            int a = 15;
-            int b = 20;
-
             var result = Program.IsFifteen(a, b);
 
-            Assert.AreEqual(true, result);
+            Assert.AreEqual(c, result);
         }
     }
 }
