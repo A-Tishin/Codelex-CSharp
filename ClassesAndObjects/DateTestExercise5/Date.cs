@@ -2,7 +2,7 @@
 
 namespace DateTestExercise5
 {
-    class Date
+    public class Date
     {
         private int _day;
         private int _month;
@@ -23,7 +23,7 @@ namespace DateTestExercise5
                 if (value < 1 || value > 31)
                 {
                     Console.WriteLine("Day must be from 1 to 31.");
-                    _day = 0;
+                    _day = 1;
                     return;
                 }
                 _day = value;
@@ -38,7 +38,7 @@ namespace DateTestExercise5
                 if (value < 1 || value > 12)
                 {
                     Console.WriteLine("We have only 12 months in year.");
-                    _month = 0;
+                    _month = 1;
                     return;
                 }
 
@@ -53,7 +53,7 @@ namespace DateTestExercise5
             {
                 if (value > 2021)
                 {
-                    _year = 0;
+                    _year = 2020;
                     return;
                 }
 

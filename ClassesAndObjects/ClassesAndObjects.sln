@@ -19,13 +19,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FuelgaugeAndOdo", "Fuelgaug
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MovieExercise4", "MovieExercise4\MovieExercise4.csproj", "{69D735E0-F1CF-455A-8E76-3E1251EDEB87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateTestExercise5", "DateTestExercise5\DateTestExercise5.csproj", "{91C87A80-7B6B-4D47-8913-E71EF0350882}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateTestExercise5", "DateTestExercise5\DateTestExercise5.csproj", "{91C87A80-7B6B-4D47-8913-E71EF0350882}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise7", "Exercise7\Exercise7.csproj", "{BEBFC991-28D5-4C96-A41D-AE5435EFDCD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise7", "Exercise7\Exercise7.csproj", "{BEBFC991-28D5-4C96-A41D-AE5435EFDCD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise8", "Exercise8\Exercise8.csproj", "{05B6A967-2134-4BDD-8F51-B35B6D6DC2FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise8", "Exercise8\Exercise8.csproj", "{05B6A967-2134-4BDD-8F51-B35B6D6DC2FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise9", "Exercise9\Exercise9.csproj", "{6C40D7C4-9001-4CAE-AB18-5EB683638FAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise9", "Exercise9\Exercise9.csproj", "{6C40D7C4-9001-4CAE-AB18-5EB683638FAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassProduct1Tests", "ClassProduct1Tests\ClassProduct1Tests.csproj", "{65257010-DD42-4C81-9132-933425BEF66B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateTestExercise5Tests1", "DateTestExercise5Tests1\DateTestExercise5Tests1.csproj", "{96BEC06C-A64F-4DCF-AD31-A3DBCB5B2C8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountTests", "AccountTests\AccountTests.csproj", "{9F62AEE2-1D62-4420-BE89-95CEF8B53A4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +87,18 @@ Global
 		{6C40D7C4-9001-4CAE-AB18-5EB683638FAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C40D7C4-9001-4CAE-AB18-5EB683638FAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C40D7C4-9001-4CAE-AB18-5EB683638FAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65257010-DD42-4C81-9132-933425BEF66B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65257010-DD42-4C81-9132-933425BEF66B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65257010-DD42-4C81-9132-933425BEF66B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65257010-DD42-4C81-9132-933425BEF66B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96BEC06C-A64F-4DCF-AD31-A3DBCB5B2C8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96BEC06C-A64F-4DCF-AD31-A3DBCB5B2C8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96BEC06C-A64F-4DCF-AD31-A3DBCB5B2C8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96BEC06C-A64F-4DCF-AD31-A3DBCB5B2C8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F62AEE2-1D62-4420-BE89-95CEF8B53A4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F62AEE2-1D62-4420-BE89-95CEF8B53A4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F62AEE2-1D62-4420-BE89-95CEF8B53A4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F62AEE2-1D62-4420-BE89-95CEF8B53A4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

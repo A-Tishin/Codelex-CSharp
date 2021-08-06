@@ -1,6 +1,6 @@
 ﻿namespace Account
 {
-    class Account
+    public class Account
     {
         private string _name;
         private double _money;
@@ -11,13 +11,18 @@
             _money = money;
         }
 
-        public double withdrawal(double i)
+        public double Balance()
+        {
+            return _money;
+        }
+
+        public double Withdrawal(double i)
         {
             _money -= i;
             return i;
         }
 
-        public void deposit(double i)
+        public void Deposit(double i)
         {
             _money += i;
         }

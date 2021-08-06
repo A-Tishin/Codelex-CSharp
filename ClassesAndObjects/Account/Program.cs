@@ -2,7 +2,7 @@
 
 namespace Account
 {
-    class Program
+    public class Program
     {
         private static void Main(string[] args)
         {
@@ -26,7 +26,7 @@ namespace Account
 
         public static void Transfer(Account from, Account to, double howMuch)
         {
-            to.deposit(from.withdrawal(howMuch));
+            to.Deposit(from.Withdrawal(howMuch));
         }
     }
 }
