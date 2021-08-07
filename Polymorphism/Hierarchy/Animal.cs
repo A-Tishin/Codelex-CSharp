@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hierarchy
 {
-     abstract class Animal
+     public abstract class Animal
      {
          public string animalName;
          public string animalType;
@@ -20,10 +20,10 @@ namespace Hierarchy
              this.animalWeight = animalWeight;
          }
 
-         public abstract void MakeSound();
+         public abstract string MakeSound();
 
          public abstract string ToString();
 
-         public abstract void Eat(Food food);
+         public abstract string Eat(Food food);
      }
 }

@@ -34,17 +34,25 @@ namespace Hierarchy
                     var zebra = new Zebra(animal[0], animal[1], Convert.ToDouble(animal[2]), animal[3]);
                     animalList.Add(zebra);
                 }
+                else
+                {
+                    continue;
+                }
 
-                animalList.Last().MakeSound();
+                Console.WriteLine(animalList.Last().MakeSound());
                 string[] givenFood = Console.ReadLine().Split(" ");
 
                 if (givenFood[0] == "Meat")
                 {
-                    animalList.Last().Eat(new Meat(Convert.ToInt32(givenFood[1])));
+                    Console.WriteLine(animalList.Last().Eat(new Meat(Convert.ToInt32(givenFood[1]))));
                 } 
                 else if (givenFood[0] == "Vegetable")
                 {
-                    animalList.Last().Eat(new Vegetable(Convert.ToInt32(givenFood[1])));
+                    Console.WriteLine(animalList.Last().Eat(new Vegetable(Convert.ToInt32(givenFood[1]))));
+                }
+                else
+                {
+                    Console.WriteLine($"{animalList.Last()} are not eating that type of food!");
                 }
                 Console.WriteLine("Continue? y/n");
             } while (Console.ReadLine() != "n");

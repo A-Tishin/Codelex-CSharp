@@ -11,23 +11,21 @@ namespace Hierarchy
         public Mouse(string animalType, string animalName, double animalWeight, string livingRegion)
             : base(animalType, animalName, animalWeight, livingRegion) {}
 
-        public override void MakeSound()
+        public override string MakeSound()
         {
-            Console.WriteLine("ps ps");
+            return "ps ps";
         }
 
-        public override void Eat(Food food)
+        public override string Eat(Food food)
 
         {
             if (food.GetFoodType() != "Vegetables")
             {
-                Console.WriteLine($"{animalType} are not eating that type of food!");
+                return $"{animalType} are not eating that type of food!";
             }
-            else
-            {
-                foodEaten = food.quantity;
-                Console.WriteLine($"{animalType}, {animalName}, {animalWeight}, {livingRegion}, {foodEaten}");
-            }
+
+            foodEaten = food.quantity;
+            return $"{animalType}, {animalName}, {animalWeight}, {livingRegion}, {foodEaten}";
         }
 
         public override string ToString()

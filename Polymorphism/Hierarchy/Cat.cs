@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hierarchy
 {
-    class Cat: Felime
+    public class Cat: Felime
     {
         private string _breed;
 
@@ -16,15 +16,15 @@ namespace Hierarchy
             _breed = breed;
         }
 
-        public override void MakeSound()
+        public override string MakeSound()
         {
-            Console.WriteLine("Meowwww");
+            return "Meowwww";
         }
 
-        public override void Eat(Food food)
+        public override string Eat(Food food)
         {
             foodEaten = food.quantity;
-            Console.WriteLine($"{animalType}, [{animalName}, {_breed}, {animalWeight}, {livingRegion}, {foodEaten}]");
+            return $"{animalType}, [{animalName}, {_breed}, {animalWeight}, {livingRegion}, {foodEaten}]";
         }
 
         public override string ToString()

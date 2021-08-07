@@ -6,28 +6,25 @@ using System.Threading.Tasks;
 
 namespace Hierarchy
 {
-    class Tiger: Felime
+    public class Tiger: Felime
     {
         public Tiger(string animalType, string animalName, double animalWeight, string livingRegion)
             : base(animalType, animalName, animalWeight, livingRegion) {}
 
-        public override void MakeSound()
+        public override string MakeSound()
         {
-            Console.WriteLine("ROAAR!!!");
+            return "ROAAR!!!";
         }
 
-        public override void Eat(Food food)
-
+        public override string Eat(Food food)
         {
             if (food.GetFoodType() != "Meat")
             {
-                Console.WriteLine($"{animalType} are not eating that type of food!");
+                return $"{animalType} are not eating that type of food!";
             }
-            else
-            {
-                foodEaten = food.quantity;
-                Console.WriteLine($"{animalType}, [{animalName}, {animalWeight}, {livingRegion}, {foodEaten}]");
-            }
+
+            foodEaten = food.quantity;
+            return $"{animalType}, [{animalName}, {animalWeight}, {livingRegion}, {foodEaten}]";
         }
 
         public override string ToString()

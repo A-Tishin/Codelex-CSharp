@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hierarchy
 {
-    abstract class Mammal: Animal
+    public abstract class Mammal: Animal
     {
         public string livingRegion;
 
