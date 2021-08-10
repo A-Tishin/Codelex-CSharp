@@ -1,22 +1,40 @@
 ﻿using System;
+using System.Globalization;
+using _8.FooCompany;
 
 namespace FooCompany
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            double[] employees = {7.50, 8.20, 10, 00};
-            double[] hours = {35, 47, 73};
+            var david = new Employee(7.50, 35);
+            var alex = new Employee(8.20, 47);
+            var inna = new Employee(10.00, 73);
+            Console.WriteLine(CheckLegalityAndSalary(david));
+            Console.WriteLine(CheckLegalityAndSalary(alex));
+            Console.WriteLine(CheckLegalityAndSalary(inna));
+        }
 
-            for (var i = 0; i < employees.Length; i++)
+        public static string CheckLegalityAndSalary(Employee employee)
+        {
+            if (employee.salary < 8)
             {
-                if (hours[i] > 40 && hours[i] < 61 && employees[i] > 8)
-                    Console.WriteLine($"{40 * employees[i] + ((hours[i] - 40) * employees[i] * 1.5)}");
-                else if (hours[i] < 40 && employees[i] > 8)
-                    Console.WriteLine($"{employees[i] * hours[i]}");
-                else
-                    Console.WriteLine("Error! Too many hours or too small salary per hour.");
+                return "Error!";
+            }
+            else if (employee.workingHours > 60)
+            {
+                return "Error!";
+            }
+            else if (employee.workingHours > 40)
+            {
+                double salary = 40 * employee.salary + (employee.workingHours - 40) * employee.salary * 1.5;
+                return salary.ToString();
+            }
+            else
+            {
+                double salary = employee.workingHours * employee.salary;
+                return salary.ToString();
             }
         }
     }

@@ -4,7 +4,7 @@ using ClassProduct1;
 
 namespace ClassProduct
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {

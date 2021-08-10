@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Hierarchy
 {
-    abstract class Food
+    public abstract class Food
     {
         public int quantity = 0;
 

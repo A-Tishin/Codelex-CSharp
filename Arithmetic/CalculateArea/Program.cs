@@ -2,7 +2,7 @@
 
 namespace CalculateArea
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -14,17 +14,30 @@ namespace CalculateArea
 
                 if (choice == 1)
                 {
-                    calculateCircleArea();
+                    Console.Clear();
+                    Console.WriteLine("What is the circle's radius? ");
+                    double radius = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("The circle area is: " + calculateCircleArea(radius));
                     Console.ReadKey();
                 }
                 else if (choice == 2)
                 {
-                    calculateRectangleArea();
+                    Console.Clear();
+                    Console.WriteLine("Enter length? ");
+                    double length = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Enter width? ");
+                    double width = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Area of this rectangle is: " + calculateRectangleArea(length, width));
                     Console.ReadKey();
                 }
                 else if (choice == 3)
                 {
-                    calculateTriangleArea();
+                    Console.Clear();
+                    Console.WriteLine("Enter length of the triangle's base? ");
+                    double ground = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Enter triangle's height? ");
+                    double height = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Area of this triangle is: " + calculateTriangleArea(ground, height));
                     Console.ReadKey();
                 }
                 else if (choice == 4)
@@ -58,35 +71,34 @@ namespace CalculateArea
             return userChoice;
         }
 
-        public static void calculateCircleArea()
+        public static string calculateCircleArea(double radius)
         {
-            var keyboard = Console.ReadKey();
-            Console.Clear();
-            Console.WriteLine("What is the circle's radius? ");
-            double radius = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("The circle's area is " + (Math.PI * radius * 2));
+            if (radius < 0)
+            {
+                return "Radius must be positive.";
+            }
+
+            return Math.Round((Math.PI * radius * 2), 2).ToString();
         }
 
-        public static void calculateRectangleArea()
+        public static string calculateRectangleArea(double length, double width)
         {
-            var keyboard = Console.ReadKey();
-            Console.Clear();
-            Console.WriteLine("Enter length? ");
-            decimal length = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter width? ");
-            decimal width = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("The rectangle's area is " + length * width);
+            if (length < 0 || width < 0)
+            {
+                return "Values must be positive";
+            }
+
+            return Math.Round((length * width), 2).ToString();
         }
 
-        public static void calculateTriangleArea()
+        public static string calculateTriangleArea(double ground, double height)
         {
-            var keyboard = Console.ReadKey();
-            Console.Clear();
-            Console.WriteLine("Enter length of the triangle's base? ");
-            decimal ground = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter triangle's height? ");
-            decimal height = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("The triangle's area is " + (ground * height) / 2);
+            if (ground < 0 || height < 0)
+            {
+                return "Values must be positive";
+            }
+
+            return Math.Round(((ground * height) / 2), 2).ToString();
         }
     }
 }

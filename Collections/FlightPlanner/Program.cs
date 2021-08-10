@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FlightPlanner
 {
-    class Program
+    public class Program
     {
         private const string Path = "../../flights.txt";
 
@@ -21,7 +21,7 @@ namespace FlightPlanner
             Console.ReadKey();
         }
 
-        static string MakeTrip(Dictionary<string, List<string>> routes, List<string> cities)
+        public static string MakeTrip(Dictionary<string, List<string>> routes, List<string> cities)
         {
             Console.WriteLine("Choose your starting point: ");
             PrintCities(cities);
@@ -43,7 +43,7 @@ namespace FlightPlanner
             return journey;
         }
 
-        static void PrintCities(List<string> cities)
+        public static void PrintCities(List<string> cities)
         {
             int counter = 1;
             foreach (var city in cities)
@@ -53,7 +53,7 @@ namespace FlightPlanner
             }
         }
 
-        static Dictionary<string, List<string>> GetRoutes(string[] text)
+        public static Dictionary<string, List<string>> GetRoutes(string[] text)
         {
             var routes = new Dictionary<string, List<string>>();
             foreach (var s in text)
@@ -77,7 +77,7 @@ namespace FlightPlanner
             return routes;
         }
 
-        static HashSet<string> GetCities(string[] text)
+        public static HashSet<string> GetCities(string[] text)
         {
             var cities = new HashSet<string>();
             foreach (var c in text)

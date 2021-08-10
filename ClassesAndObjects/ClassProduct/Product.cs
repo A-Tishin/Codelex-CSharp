@@ -2,7 +2,7 @@
 
 namespace ClassProduct1
 {
-    class Product
+    public class Product
     {
         private string _name;
         private decimal _price;
@@ -13,6 +13,29 @@ namespace ClassProduct1
             _name = name;
             _amount = amount;
             _price = price;
+        }
+
+        public decimal Price
+        {
+            set
+            {
+                if (value < 0)
+                {
+                    Console.WriteLine("Price cannot be less, than zero.");
+                }
+                else
+                {
+                    _price = value;
+                }
+            }
+            get => _price;
+        }
+
+        public int Stock => _amount;
+
+        public void NewPrice(decimal newPrice)
+        {
+            Price = newPrice;
         }
 
         public void PrintProduct()
@@ -27,11 +50,6 @@ namespace ClassProduct1
             }
         }
 
-        public void NewPrice(decimal price)
-        {
-            _price = price;
-        }
-
         public void Sold()
         {
             if (_amount == 0)
@@ -44,7 +62,6 @@ namespace ClassProduct1
         public void Supply(int quantity)
         {
             _amount += quantity;
-            Console.WriteLine($"X{quantity} {_name} has arrived to store.");
         }
     }
 }

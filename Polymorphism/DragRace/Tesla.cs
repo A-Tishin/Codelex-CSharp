@@ -2,7 +2,7 @@ using System;
 
 namespace DragRace
 {
-    class Tesla: Car
+    public class Tesla: Car
     {
         public Tesla(string carBrand) : base(carBrand)
         {
