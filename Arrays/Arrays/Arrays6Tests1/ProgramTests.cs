@@ -14,12 +14,15 @@ namespace Exercise_6.Tests
         [TestMethod()]
         public void GetChangedArrayTest_inputArray_returnModArray()
         {
+            // Arrange
             int num = -7;
             int[] testArr = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             int[] testArr2 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, -7 };
 
+            // Act
             int[] arr = Program.GetChangedArray(testArr);
 
+            //Assert
             Assert.AreEqual(arr[9], num);
             for (var i = 0; i < 10; i++)
             {

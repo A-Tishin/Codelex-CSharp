@@ -12,35 +12,47 @@ namespace CalculateArea.Tests
     public class ProgramTests
     {
         [TestMethod()]
+
+        // Arrange
         [DataRow(10, "62,83")]
         [DataRow(7, "43,98")]
         [DataRow(-5, "Radius must be positive.")]
-        public void calculateCircleAreaTest_input7_output4398(double rad, string area)
+        public void CalculateCircleAreaTest_inputRadius_returnAreaOrErrorIfNegative(double rad, string area)
         {
+            // Act
             var result = Program.calculateCircleArea(rad);
 
+            // Assert
             Assert.AreEqual(area, result);
         }
 
         [TestMethod()]
+
+        // Arrange
         [DataRow(5, 10, "50")]
         [DataRow(5, -10, "Values must be positive")]
         [DataRow(10, 0, "0")]
-        public void calculateRectangleAreaTest_inputTwoNums_returnProd(double width, double height, string area)
+        public void CalculateRectangleAreaTest_inputWidthAndHeight_returnAreaOrErrorIfNegative(double width, double height, string area)
         {
+            // Act
             var result = Program.calculateRectangleArea(width, height);
 
+            // Assert
             Assert.AreEqual(area, result);
         }
 
         [TestMethod()]
+
+        // Arrange
         [DataRow(5, 2, "5")]
         [DataRow(10, 50, "250")]
         [DataRow(-5, 10, "Values must be positive")]
-        public void calculateTriangleAreaTest_inputTwoNums_returnProdDividedBy2(double ground, double height, string area)
+        public void CalculateTriangleAreaTest_inputGroundAndHeight_returnAreaOrErrorIfNegative(double ground, double height, string area)
         {
+            // Act
             var result = Program.calculateTriangleArea(ground, height);
 
+            // Assert
             Assert.AreEqual(area, result);
         }
     }

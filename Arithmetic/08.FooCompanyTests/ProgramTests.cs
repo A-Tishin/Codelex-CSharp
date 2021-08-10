@@ -12,33 +12,44 @@ namespace FooCompany.Tests
     public class ProgramTests
     {
         [TestMethod()]
-        public void CheckLegalityAndSalaryTest_inputTestEmployee_outputSalary500()
+        public void CheckLegalityAndSalaryTest_inputEmployeeAllInputValid_outputSalary()
         {
+            // Arrange
             var mario = new Employee(25, 20);
             string output = "500";
 
+            // Act
             var result = Program.CheckLegalityAndSalary(mario);
 
+            // Assert
             Assert.AreEqual(output, result);
         }
 
-        public void CheckLegalityAndSalaryTest_inputTestEmployee_returnErr1()
+        [TestMethod()]
+        public void CheckLegalityAndSalaryTest_inputEmployeeTooSmallHourSalary_returnError()
         {
+            // Arrange
             var mario = new Employee(7, 45);
             string output = "Error!";
 
+            // Act
             var result = Program.CheckLegalityAndSalary(mario);
 
+            // Assert
             Assert.AreEqual(output, result);
         }
 
-        public void CheckLegalityAndSalaryTest_inputTestEmployee_returnErr2()
+        [TestMethod()]
+        public void CheckLegalityAndSalaryTest_inputEmployeeTooMuchHours_returnError()
         {
+            // Arrange
             var mario = new Employee(10, 75);
             string output = "Error!";
 
+            // Act
             var result = Program.CheckLegalityAndSalary(mario);
 
+            // Assert
             Assert.AreEqual(output, result);
         }
     }

@@ -12,13 +12,32 @@ namespace OddEven.Tests
     public class ProgramTests
     {
         [TestMethod()]
-        [DataRow(0, false)]
-        [DataRow(11, true)]
-        [DataRow(36, false)]
-        public void CheckOddEvenTest_inputOdd_returnTrue(int num, bool isOdd)
+
+        // Arrange
+        [DataRow(0, true)]
+        [DataRow(12, true)]
+        [DataRow(36, true)]
+        public void CheckOddEvenTest_inputEvenNum_returnTrue(int num, bool isOdd)
         {
+            // Act
             var result = Program.CheckOddEven(num);
 
+            // Assert
+            Assert.AreEqual(isOdd, result);
+        }
+
+        [TestMethod()]
+
+        // Arrange
+        [DataRow(1, false)]
+        [DataRow(11, false)]
+        [DataRow(21, false)]
+        public void CheckOddEvenTest_inputOddNum_returnFalse(int num, bool isOdd)
+        {
+            // Act
+            var result = Program.CheckOddEven(num);
+
+            // Assert
             Assert.AreEqual(isOdd, result);
         }
     }
