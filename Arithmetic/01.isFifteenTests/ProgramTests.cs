@@ -12,8 +12,6 @@ namespace IsFifteen.Tests
     public class ProgramTests
     {
         [TestMethod()]
-
-        // Arrange
         [DataRow(25, 10, true)]
         [DataRow(10, 5, true)]
         [DataRow(15, 15, true)]
@@ -27,8 +25,6 @@ namespace IsFifteen.Tests
         }
 
         [TestMethod()]
-
-        // Arrange
         [DataRow(1, 2, false)]
         [DataRow(14, 6, false)]
         [DataRow(0, 0, false)]

@@ -26,31 +26,19 @@ namespace FooCompany.Tests
         }
 
         [TestMethod()]
-        public void CheckLegalityAndSalaryTest_inputEmployeeTooSmallHourSalary_returnError()
+        public void CheckLegalityAndSalaryTest_inputInvalidHoursAndSalary_returnError()
         {
             // Arrange
             var mario = new Employee(7, 45);
+            var luigi = new Employee(10, 75);
             string output = "Error!";
 
             // Act
-            var result = Program.CheckLegalityAndSalary(mario);
+            var marioResult = Program.CheckLegalityAndSalary(mario);
+            var luigiResult = Program.CheckLegalityAndSalary(luigi);
 
             // Assert
-            Assert.AreEqual(output, result);
-        }
-
-        [TestMethod()]
-        public void CheckLegalityAndSalaryTest_inputEmployeeTooMuchHours_returnError()
-        {
-            // Arrange
-            var mario = new Employee(10, 75);
-            string output = "Error!";
-
-            // Act
-            var result = Program.CheckLegalityAndSalary(mario);
-
-            // Assert
-            Assert.AreEqual(output, result);
+            Assert.IsTrue(output == marioResult && output == luigiResult);
         }
     }
 }

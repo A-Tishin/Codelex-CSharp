@@ -12,8 +12,6 @@ namespace CozaLoza.Tests
     public class ProgramTests
     {
         [TestMethod()]
-
-        // Arrange
         [DataRow(1, "1")]
         [DataRow(8, "8")]
         [DataRow(26, "26")]
@@ -27,8 +25,6 @@ namespace CozaLoza.Tests
         }
 
         [TestMethod()]
-
-        // Arrange
         [DataRow(3, "Coza")]
         [DataRow(9, "Coza")]
         [DataRow(27, "Coza")]
@@ -42,8 +38,6 @@ namespace CozaLoza.Tests
         }
 
         [TestMethod()]
-
-        // Arrange
         [DataRow(5, "Loza")]
         [DataRow(25, "Loza")]
         [DataRow(55, "Loza")]
@@ -57,8 +51,6 @@ namespace CozaLoza.Tests
         }
 
         [TestMethod()]
-
-        // Arrange
         [DataRow(7, "Woza")]
         [DataRow(28, "Woza")]
         [DataRow(49, "Woza")]

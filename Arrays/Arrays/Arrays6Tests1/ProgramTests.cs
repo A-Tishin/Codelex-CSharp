@@ -12,7 +12,7 @@ namespace Exercise_6.Tests
     public class ProgramTests
     {
         [TestMethod()]
-        public void GetChangedArrayTest_inputArray_returnModArray()
+        public void GetChangedArrayTest_inputIntArray_returnIntArrayButLastIsMinusSeven()
         {
             // Arrange
             int num = -7;

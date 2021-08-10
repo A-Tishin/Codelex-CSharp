@@ -12,8 +12,6 @@ namespace CalculateArea.Tests
     public class ProgramTests
     {
         [TestMethod()]
-
-        // Arrange
         [DataRow(10, "62,83")]
         [DataRow(7, "43,98")]
         [DataRow(-5, "Radius must be positive.")]
@@ -27,8 +25,6 @@ namespace CalculateArea.Tests
         }
 
         [TestMethod()]
-
-        // Arrange
         [DataRow(5, 10, "50")]
         [DataRow(5, -10, "Values must be positive")]
         [DataRow(10, 0, "0")]
@@ -42,8 +38,6 @@ namespace CalculateArea.Tests
         }
 
         [TestMethod()]
-
-        // Arrange
         [DataRow(5, 2, "5")]
         [DataRow(10, 50, "250")]
         [DataRow(-5, 10, "Values must be positive")]

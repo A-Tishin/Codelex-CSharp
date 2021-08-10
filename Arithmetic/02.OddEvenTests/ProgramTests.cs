@@ -12,8 +12,6 @@ namespace OddEven.Tests
     public class ProgramTests
     {
         [TestMethod()]
-
-        // Arrange
         [DataRow(0, true)]
         [DataRow(12, true)]
         [DataRow(36, true)]
@@ -27,8 +25,6 @@ namespace OddEven.Tests
         }
 
         [TestMethod()]
-
-        // Arrange
         [DataRow(1, false)]
         [DataRow(11, false)]
         [DataRow(21, false)]
