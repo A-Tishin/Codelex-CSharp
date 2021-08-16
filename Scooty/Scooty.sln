@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scooty", "Scooty\Scooty.csproj", "{ACE07C72-27BA-4A0B-B905-1759D7C2FECB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScootyTests", "ScootyTests\ScootyTests.csproj", "{090C146A-14CF-42A9-9A56-83B20FC9BB24}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACE07C72-27BA-4A0B-B905-1759D7C2FECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACE07C72-27BA-4A0B-B905-1759D7C2FECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACE07C72-27BA-4A0B-B905-1759D7C2FECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACE07C72-27BA-4A0B-B905-1759D7C2FECB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{090C146A-14CF-42A9-9A56-83B20FC9BB24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{090C146A-14CF-42A9-9A56-83B20FC9BB24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{090C146A-14CF-42A9-9A56-83B20FC9BB24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{090C146A-14CF-42A9-9A56-83B20FC9BB24}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4DD68EB-E217-4F4E-8F31-AB093EB1EF23}
+	EndGlobalSection
+EndGlobal

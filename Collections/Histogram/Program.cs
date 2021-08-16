@@ -26,7 +26,6 @@ namespace Histogram
             for (var i = 0; i < 10; i++)
             {
                 string output = $"{i}0-{10 * i + 9}: ";
-
                 if (i == 0)
                 {
                     output = "00-09: ";
