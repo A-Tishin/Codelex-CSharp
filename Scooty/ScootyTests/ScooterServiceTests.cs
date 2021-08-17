@@ -14,7 +14,7 @@ namespace Scooty.Tests
         public RentalCompany test = new RentalCompany("test");
 
         [TestMethod()]
-        public void RemoveScooterTest1()
+        public void RemoveScooterTest()
         {
             test.AddScooter("test", .20m);
             test.RemoveScooter("test");
@@ -26,7 +26,7 @@ namespace Scooty.Tests
         }
 
         [TestMethod()]
-        public void RemoveScooterTest2()
+        public void RemoveScooterTest_tryRemoveScooterInRent_GetFullListWORemoving()
         {
             test.AddScooter("test", .20m);
             test.StartRent("test");

@@ -26,31 +26,33 @@ namespace Scooty.Tests
         }
 
         [TestMethod()]
-        public void EndRentTest2()
+        public void EndRentTest_inputRentForThreeHours_returnFlooredBill()
         {
             test.AddScooter("test", .20m);
-            test.StartRent("test");
+            test.GetScooterById("test").SessionStart = new DateTime(1, 1, 1, 00, 00, 00);
+            var end = new DateTime(1, 1, 1, 03, 00, 00);
             var expect = 20m;
 
-            var result = test.EndRent("test", DateTime.Now.AddHours(2));
+            var result = test.EndRent("test", end);
 
             Assert.AreEqual(expect, result);
         }
 
         [TestMethod()]
-        public void EndRentTest3()
+        public void EndRentTest_inputTwoDayRental_returnFlooredAndSummedBill()
         {
             test.AddScooter("test", .20m);
-            test.StartRent("test");
-            var expect = 40m;
+            test.GetScooterById("test").SessionStart = new DateTime(1, 1, 1, 01, 00, 00);
+            var end = new DateTime(1, 1, 3, 01, 00, 00);
+            var expect = 52m;
 
-            var result = test.EndRent("test", DateTime.Now.AddDays(1));
+            var result = test.EndRent("test", end);
 
             Assert.AreEqual(expect, result);
         }
 
         [TestMethod()]
-        public void CalculateIncomeTest1()
+        public void CalculateIncomeTest_inputEmptyList_returnNoIncome()
         {
             var expect = 0;
 
@@ -60,7 +62,7 @@ namespace Scooty.Tests
         }
 
         [TestMethod()]
-        public void CalculateIncomeTest2()
+        public void CalculateIncomeTest_inputReports_returnSumOfBills()
         {
             test.AddScooter("test", .20m);
             test.accountant.AddReport(test.GetScooterById("test"), 15m);
